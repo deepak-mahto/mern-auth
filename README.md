@@ -1,3 +1,3 @@
 # MERN Auth
 
-## Full stack application using the mern stack
+## MERN authentication using JWT and HTTP-Only cookie
