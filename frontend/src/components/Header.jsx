@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, NavDropdown, Badge } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -16,9 +16,9 @@ const Header = () => {
 
   const logoutHandler = async () => {
     try {
-      await logoutApiCall.unwrap();
+      await logoutApiCall().unwrap();
       dispatch(logout());
-      navigate("/");
+      navigate("/login");
     } catch (err) {
       console.log(err);
     }
